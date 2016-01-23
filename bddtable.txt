@@ -1,5 +1,6 @@
 BEHAVIOR
-A) Count up from one to a user specified number
+A) Count up to 5
+B) Count up from one to a user specified number
 B) Identify if a number is divisible by 3
 C) Identify if a number is divisible by 5
 D) Identify if a number is divisible by 3 & 5
@@ -7,12 +8,14 @@ D) Identify if a number is divisible by 3 & 5
 
 INPUT
 A) 5
-B) 3
-C) 5
-D) 15
+B) number
+C) 3
+D) 5
+E) 15
 
 OUTPUT
 A) 1 , 2 , 3 , 4 , 5
+B) counter
 B) true
 C) true
 D) true
