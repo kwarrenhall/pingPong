@@ -1,24 +1,26 @@
-(document).ready(function(){
-  $("form").submit(function(event) {
-  var userNumber = parseInt($("input#number").val());
-  var result = pingPong(userNumber);
-  $("#outPut").text(result);
-  $(".result").show();
-  event.preventDefault();
-  });
-});
-
 
 var pingPong = function(number) {
 var outPut = [];
-for (number; number > 0; number++) {
-    if (number % 3 ===0) {
+for (var i = 1; 1 >= number; i++) {
+    if (i % 3 ===0) {
       outPut.push("ping");
-    } else if (number % 5 ===0) {
-      outPut.push("pong");}
-    } else if (number % 3 === 0 && number % 5 ===0) {
+    } else if (i % 5 ===0) {
+      outPut.push("pong");
+    } else if (i % 3 === 0 && i % 5 ===0) {
       outPut.push("ping-pong");
     } else {
-     outPut.push(number);
+     outPut.push(i);
     }
+  }
+  return outPut;
 };
+
+(document).ready(function(){
+  $("#userInput").submit(function(event) {
+  var number = parseInt($("#number").val());
+  var result = pingPong(number);
+
+  $("#outPut").show();
+  event.preventDefault();
+  });
+});
