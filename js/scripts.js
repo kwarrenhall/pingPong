@@ -1,6 +1,4 @@
 function pingPong(inputNumber) {
-  var numberThree = 3
-  var numberFive = 5
   var output = [];
 
   for (var i = 1; i <= inputNumber; i++) {
@@ -18,28 +16,14 @@ function pingPong(inputNumber) {
   };
 
 
+  $(function() {
+    $("form#pingPong").submit(function(event){
+      var userInput = parseInt($("#userInput").val());
+      var result = pingPong(userInput);
+      $('#result').empty();
+      $('#result').append(result.join(", "));
+      $('#result').show();
 
-
-
-
-
-// function pingPong(number) {
-// var output = [];
-//
-//      for (var i = 1; i <= number; i++) {
-//      if (i % 15 === 0) {
-//      output += "PingPong";
-//      } else if (i % 5 === 0) {
-//      output += "pong";
-//      } else if (i % 3 === 0) {
-//      output += "ping";
-//      } else {
-//      output += i;
-//      }
-//      }
-//      return output;
-// };
-//
-//
-//  // event.preventDefault();
-//  for (var i = 1; i <= myNumber; i++) {
+        event.preventDefault();
+    });
+  });

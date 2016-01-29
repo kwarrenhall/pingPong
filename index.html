@@ -17,21 +17,22 @@
       </header>
     </div>
 
-      <form id="Game">
+      <form id="pingPong">
         <h3>"Here is how you play"</h3>
         <p> For numbers divisible by 3 you will see ping!</p>
         <p> For numbers divisible by 5 you will see pong!</p>
         <p> For numbers divisible by 15 you will see pingPong!</p>
         <div class="form-group">
-          <input type="number" class="form-control" id="number" placeholder="number">
+          <input type="number" class="form-control" id="userInput" placeholder="number">
         </div>
-
-
         <div class="btn btn-info">
-        <button type="submit" class="btn btn-primary" id=userInput>Find out!</button></div>
+        <button type="submit" class="btn btn-primary" id=imputNumber>Find out!</button></div>
       </form>
       <div class="result">
-        Your results are <span id="outPut"></span>
+        <p>Your results are:</p>
+        <ul>
+          <span id="result"></span>
+        </ul>
       </div>
     </div>
   </body>
